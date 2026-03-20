@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proof of Life — Two Delusional Besties Telling Each Other Exactly</title>
+  <meta name="description" content="A podcast by two women in their 40s who have nothing figured out and zero apologies about it. Real talk on motherhood, marriage, money, and the messy middle of it all.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%23E8715A'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-size='16' font-family='Georgia,serif' fill='white' font-style='italic'>P</text></svg>">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     NAVIGATION
+══════════════════════════════════════ -->
+<nav class="nav" id="mainNav">
+  <a href="#" data-page="page-home">
+    <img 
+      src="https://i.ibb.co.com/zHB6BBSj/Modern-feminine-podcast-logo.png" 
+      alt="Proof of Life Podcast" 
+      class="nav-logo"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+    >
+    <span style="display:none; font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:#2C2420; letter-spacing:-0.01em;">Proof of Life</span>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#" data-page="page-home" class="active">Home</a></li>
+    <li><a href="#" data-page="page-about">About Us</a></li>
+    <li><a href="#" data-page="page-episodes">Episodes</a></li>
+    <li>
+      <a href="#" data-platform="spotify" class="btn btn-primary nav-listen" style="padding:0.55rem 1.2rem; font-size:0.7rem;">
+        Listen Now
+      </a>
+    </li>
+  </ul>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#" data-page="page-home">Home</a>
+  <a href="#" data-page="page-about">About Us</a>
+  <a href="#" data-page="page-episodes">Episodes</a>
+  <a href="#" class="btn btn-primary" style="font-size:0.85rem;">Listen Now</a>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     PAGE: HOME
+══════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      
+      <!-- Left: Content -->
+      <div class="hero-content">
+        <div class="hero-eyebrow anim-fade-in delay-1">
+          <span class="eyebrow">New Episode Every Tuesday</span>
+        </div>
+
+        <h1 class="hero-title anim-fade-up delay-2">
+          <span class="accent">Proof</span> of Life
+          <span class="subtitle-line">Two Delusional Besties — Telling Each Other <em>Exactly</em></span>
+        </h1>
+
+        <p class="hero-tagline anim-fade-up delay-3">
+          Proof of Life is where two best friends in their 40s say the things everyone else is thinking—unfiltered, honest, and sometimes a little chaotic—in conversations about motherhood, marriage, entrepreneurship, and the messy reality of holding it all together, reminding you that you’re not alone and you don’t have to pretend to have it all figured out.
+        </p>
+
+        <div class="hero-actions anim-fade-up delay-4">
+          <a href="#" data-page="page-episodes" class="btn btn-primary">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14"><path d="M6.5 5.5v9l7-4.5-7-4.5z"/></svg>
+            Latest Episode
+          </a>
+          <a href="#" data-page="page-about" class="btn btn-outline">Meet the Hosts</a>
+        </div>
+
+        <div class="hero-platforms anim-fade-up delay-5">
+          <span class="platform-label">Listen on</span>
+          <div class="platform-badges">
+            <a class="platform-badge" data-platform="spotify">
+              <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" fill="#1DB954"/></svg>
+              Spotify
+            </a>
+            <a class="platform-badge" data-platform="apple">
+              <svg viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701" fill="#000"/></svg>
+              Apple
+            </a>
+            <a class="platform-badge" data-platform="google">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#4285F4"/><text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-size="9" fill="white" font-weight="bold" font-family="sans-serif">G</text></svg>
+              Google
+            </a>
+            <a class="platform-badge" data-platform="amazon">
+              <svg viewBox="0 0 24 24"><path d="M.045 18.02c.72-4.805 5.105-8.842 11.655-8.842 1.065 0 2.13.12 3.105.36l-.945 3.105c-.9-.27-1.8-.39-2.79-.39-4.185 0-7.56 2.82-8.1 6.12-.12.75.24 1.44.9 1.77a10.36 10.36 0 003.495.72c1.155 0 2.31-.18 3.405-.51l.285.69c-1.095.435-2.325.69-3.69.69-1.89 0-3.66-.57-4.965-1.5C.825 19.58.39 18.83.045 18.02z" fill="#FF9900"/></svg>
+              Amazon
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Magazine-style overlapping host photos -->
+      <div class="hero-visual anim-scale-in delay-2">
+        <div class="hosts-visual">
+
+          <!-- Decorative ring -->
+          <div class="hosts-ring"></div>
+
+          <!-- Host 1 — back (slightly left, tilted) -->
+          <div class="host-frame host-frame-1">
+            <img
+              src="HOST_1_PHOTO_URL"
+              alt="Maya — Host 1"
+              class="host-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="host-placeholder">
+              <img src="https://m.media-amazon.com/images/M/MV5BM2ZlNmE0YTEtYThjZi00OTljLWIwNDQtZDMwMWY1N2Y1OTVlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+              
+            </div>
+          </div>
+
+          <!-- Host 2 — front (slightly right, opposite tilt) -->
+          <div class="host-frame host-frame-2">
+            <img
+              src="HOST_2_PHOTO_URL"
+              alt="Serena — Host 2"
+              class="host-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="host-placeholder">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgZdt6vAACeIL-TD5I_UNpeJi7d7mqwHdagg&s">
+              
+            </div>
+          </div>
+
+          <!-- Floating badge -->
+          <div class="hosts-badge">
+            <img
+              src="https://i.ibb.co.com/zHB6BBSj/Modern-feminine-podcast-logo.png"
+              alt="Proof of Life"
+              class="hosts-badge-logo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            >
+            <span style="display:none; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:0.75rem; color:#2C2420;">POL</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FEATURED EPISODE -->
+  <section class="episode-feature">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Latest Drop</span>
+        <h2>The One You've Been Waiting For</h2>
+        <p>New episodes drop every Tuesday. Pour yourself something nice.</p>
+      </div>
+
+      <div class="featured-episode reveal delay-2">
+        <div class="featured-ep-art">
+          <span class="ep-number-badge">Episode 12 · Season 2</span>
+          <img src="https://mitigadapt.com/wp-content/uploads/2020/05/new-yorker-franzen-climate-change-adaptation-banner.png" 
+            alt="Proof of Life" 
+            class="ep-art-logo"
+            onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'%3E%3Ccircle cx=\'100\' cy=\'100\' r=\'100\' fill=\'rgba(255,255,255,0.2)\'/%3E%3Ctext x=\'50%25\' y=\'45%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'18\' font-family=\'Georgia,serif\' fill=\'white\' font-style=\'italic\'%3EProof%3C/text%3E%3Ctext x=\'50%25\' y=\'60%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'18\' font-family=\'Georgia,serif\' fill=\'white\' font-style=\'italic\'%3Eof Life%3C/text%3E%3C/svg%3E'"
+          >
+        </div>
+
+        <div class="featured-ep-content">
+          <span class="eyebrow">Season 2 · Episode 12</span>
+          <h3>The Year We Stopped Pretending</h3>
+          <p>
+            We both turned 44 within three weeks of each other. We sat across a table, poured the wine, and finally said the things we'd been quietly thinking for a decade. About our marriages. Our careers. The version of ourselves we thought we'd be by now. This one's for everyone who's tired of the highlight reel.
+          </p>
+
+          <div class="audio-player">
+            <div class="player-controls">
+              <button class="play-btn" id="featuredPlayBtn" data-player-id="featured" aria-label="Play episode">
+                <svg class="play-icon" viewBox="0 0 20 20"><path d="M6.5 5.5v9l7-4.5-7-4.5z"/></svg>
+                <svg class="pause-icon" viewBox="0 0 20 20"><rect x="5" y="5" width="3.5" height="10" rx="1"/><rect x="11.5" y="5" width="3.5" height="10" rx="1"/></svg>
+              </button>
+              <span class="player-time" id="featuredTime">0:00</span>
+              <div class="progress-track" id="featuredTrack">
+                <div class="progress-fill" id="featuredProgress"></div>
+              </div>
+              <span class="player-time">47:23</span>
+            </div>
+            <div class="player-meta">
+              <span class="player-title">Ep. 12 — The Year We Stopped Pretending</span>
+              <div class="player-volume">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.784L4.17 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.17l4.213-3.784a1 1 0 011-.14zM14 7a1 1 0 011 1v4a1 1 0 11-2 0V8a1 1 0 011-1z"/></svg>
+                <input type="range" class="volume-slider" min="0" max="100" value="80" aria-label="Volume">
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <a class="platform-badge" data-platform="spotify" style="cursor:pointer;">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" fill="#1DB954"/></svg>
+              Open in Spotify
+            </a>
+            <a class="platform-badge" data-platform="apple" style="cursor:pointer;">
+              <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09z"/></svg>
+              Apple Podcasts
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- STATS -->
+  <div class="stats-row">
+    <div class="stats-inner">
+      <div class="stat-item reveal">
+        <span class="stat-number" data-target="2.4" data-suffix="M+">0</span>
+        <span class="stat-label">Downloads</span>
+      </div>
+      <div class="stat-item reveal delay-1">
+        <span class="stat-number" data-target="87" data-suffix="">0</span>
+        <span class="stat-label">Episodes</span>
+      </div>
+      <div class="stat-item reveal delay-2">
+        <span class="stat-number" data-target="4.9" data-suffix="★">0</span>
+        <span class="stat-label">Average Rating</span>
+      </div>
+      <div class="stat-item reveal delay-3">
+        <span class="stat-number" data-target="3" data-suffix="">0</span>
+        <span class="stat-label">Seasons</span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- QUOTE STRIP -->
+  <section class="quote-strip">
+    <div class="container reveal">
+      <blockquote>
+        "The show that finally makes you feel like someone gets it."
+      </blockquote>
+      <div class="divider"></div>
+      <p class="quote-attribution">— Apple Podcasts Listener Review</p>
+    </div>
+  </section>
+
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-cta">
+    <div class="container reveal">
+      <span class="eyebrow" style="color:rgba(255,255,255,0.7);">Stay in the Loop</span>
+      <h2 style="margin-top:0.5rem;">Don't Miss an Episode</h2>
+      <p>Episode drops, behind-the-scenes moments, and the occasional unhinged voice memo.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" class="newsletter-input" placeholder="your@email.com" required aria-label="Email address">
+        <button type="submit" class="newsletter-submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE: ABOUT
+══════════════════════════════════════ -->
+<div class="page" id="page-about">
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <span class="eyebrow reveal">The Humans Behind the Chaos</span>
+    <h1 class="reveal delay-1">Two Women.<br><em>One Honest Conversation.</em></h1>
+    <p class="reveal delay-2">We're not experts. We're two best friends in our 40s who decided the most useful thing we could do was stop lying to each other — and start recording it.</p>
+  </div>
+
+
+  <!-- HOST 1 -->
+  <section class="about-intro">
+    <div class="container">
+      <div class="about-story">
+
+        <!-- Image -->
+        <div class="about-image-frame reveal from-left">
+          <!-- High-quality editorial portrait placeholder using Unsplash -->
+          <img 
+            src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80&auto=format&fit=crop" 
+            alt="Maya Holloway" 
+            class="about-photo"
+            onerror="this.classList.add('about-photo-placeholder'); this.style.display='none'; this.nextElementSibling.style.display='grid';"
+          >
+          <div class="about-photo-placeholder" style="display:none;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-style:italic; color:#8C7B75; text-align:center; padding:1rem;">Maya<br>Holloway</span>
+          </div>
+          <div class="about-frame-accent"></div>
+          <div class="about-frame-accent-2"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="about-content reveal from-right">
+          <span class="eyebrow">Host No. 01</span>
+          <p class="host-name">Maya Holloway</p>
+          <p class="host-role">Entrepreneur · Mother of Three · Recovering Perfectionist</p>
+
+          <p>I spent fifteen years building a business, a marriage, and a very convincing performance of having it all together. At 42, I finally admitted to my best friend that I had no idea what I was doing — and that it was one of the most liberating things I'd ever said.</p>
+
+          <p>I talk about entrepreneurship, the real cost of ambition, what it means to mother three kids while also desperately wanting to be a person, and the years I wasted trying to be the version of myself I thought everyone expected.</p>
+
+          <p>I'm here because the conversation that happens after the kids are in bed — the real one — is the one nobody's having publicly. Until now.</p>
+
+          <div class="tags">
+            <span class="tag">Entrepreneurship</span>
+            <span class="tag">Motherhood</span>
+            <span class="tag">Marriage</span>
+            <span class="tag">Identity</span>
+            <span class="tag">Business</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- DIVIDER -->
+  <div style="padding:2rem 0; background:var(--ivory); text-align:center;">
+    <div style="display:flex; align-items:center; justify-content:center; gap:2rem; opacity:0.3;">
+      <div style="flex:1; max-width:200px; height:1px; background:var(--charcoal);"></div>
+      <span style="font-family:'Cormorant Garamond',serif; font-size:1.8rem; color:var(--coral);">&amp;</span>
+      <div style="flex:1; max-width:200px; height:1px; background:var(--charcoal);"></div>
+    </div>
+  </div>
+
+
+  <!-- HOST 2 -->
+  <section style="padding:var(--section-pad) 0; background:var(--ivory);">
+    <div class="container">
+      <div class="about-story reverse">
+
+        <!-- Image -->
+        <div class="about-image-frame reveal from-right">
+          <img 
+            src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=600&q=80&auto=format&fit=crop" 
+            alt="Serena Cross" 
+            class="about-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+          >
+          <div class="about-photo-placeholder" style="display:none;">
+            <span style="font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-style:italic; color:#8C7B75; text-align:center; padding:1rem;">Serena<br>Cross</span>
+          </div>
+          <div class="about-frame-accent"></div>
+          <div class="about-frame-accent-2"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="about-content reveal from-left">
+          <span class="eyebrow">Host No. 02</span>
+          <p class="host-name">Serena Cross</p>
+          <p class="host-role">Creative Director · Bonus Mom · Chronic Overthinker</p>
+
+          <p>I've reinvented myself three times. Left a marriage that looked perfect. Fell in love again in my late 30s. Became a bonus mom to two kids who didn't ask for me, and somehow that became the most important thing I've ever done.</p>
+
+          <p>My thing is the identity stuff — who you are when the role you built yourself around disappears. I left a seventeen-year career to start over at 41. It was terrifying and completely the right call. I talk about that a lot.</p>
+
+          <p>I started this podcast because I needed the conversation. Turns out, so did everyone else.</p>
+
+          <div class="tags">
+            <span class="tag">Reinvention</span>
+            <span class="tag">Blended Family</span>
+            <span class="tag">Creative Work</span>
+            <span class="tag">Second Acts</span>
+            <span class="tag">Grief &amp; Growth</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- THEMES -->
+  <section class="themes-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">What We Talk About</span>
+        <h2>Every Conversation Covers the Real Stuff</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="themes-grid">
+        <div class="theme-card reveal delay-1">
+          <div class="theme-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+          </div>
+          <h4>Motherhood</h4>
+          <p>The beautiful, boring, and occasionally unhinged reality of raising humans while staying yourself.</p>
+        </div>
+
+        <div class="theme-card reveal delay-2">
+          <div class="theme-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h4>Entrepreneurship</h4>
+          <p>Building something real while also having a life. The parts they don't put on the Forbes list.</p>
+        </div>
+
+        <div class="theme-card reveal delay-3">
+          <div class="theme-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4>Marriage &amp; Relationships</h4>
+          <p>What actually keeps two people together after the good parts get easier to take for granted.</p>
+        </div>
+
+        <div class="theme-card reveal delay-4">
+          <div class="theme-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h4>The Messy Middle</h4>
+          <p>Forty-something and still figuring it out. The years that don't have a name but matter the most.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TOGETHER -->
+  <section class="hosts-together">
+    <div class="container reveal">
+      <span class="eyebrow" style="color:rgba(255,255,255,0.5);">Together Since 2019</span>
+      <h2 style="margin-top:0.6rem;">We've Known Each Other<br><em>Long Enough to Tell the Truth</em></h2>
+      <div class="divider together-divider"></div>
+      <p>We met at a school pickup line, argued about a book, and haven't stopped talking since.</p>
+      <a href="#" data-page="page-episodes" class="btn btn-ghost">Hear It for Yourself</a>
+    </div>
+  </section>
+
+</div><!-- /page-about -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE: EPISODES
+══════════════════════════════════════ -->
+<div class="page" id="page-episodes">
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <span class="eyebrow reveal">The Archive</span>
+    <h1 class="reveal delay-1">Every Episode.<br><em>All the Realness.</em></h1>
+    <p class="reveal delay-2">87 episodes and counting. Start anywhere — they're all honest.</p>
+  </div>
+
+
+  <!-- EPISODES SECTION -->
+  <section class="episodes-section">
+    <div class="container">
+
+      <!-- Filters -->
+      <div class="episodes-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Episodes</button>
+        <button class="filter-btn" data-filter="relationships">Relationships</button>
+        <button class="filter-btn" data-filter="career">Career</button>
+        <button class="filter-btn" data-filter="motherhood">Motherhood</button>
+        <button class="filter-btn" data-filter="identity">Identity</button>
+      </div>
+
+      <!-- Grid -->
+      <div class="episodes-grid">
+
+        <!-- Ep 12 -->
+        <div class="ep-card reveal delay-1" data-category="identity">
+          <div class="ep-card-art">
+            <span class="ep-ep-num">S2 · E12</span>
+            <img src="https://media.licdn.com/dms/image/v2/D4E12AQFANdtQskX-sQ/article-cover_image-shrink_720_1280/B4EZp40jZcHoAM-/0/1762963634563?e=2147483647&v=beta&t=mbaTmSYGeZLjoehiXA2gERhoOT9jUyPhtvvzKRx_oiA" alt="" class="ep-art-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 70 70\'%3E%3Ccircle cx=\'35\' cy=\'35\' r=\'35\' fill=\'rgba(255,255,255,0.2)\'/%3E%3Ctext x=\'50%25\' y=\'55%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' font-family=\'Georgia\' fill=\'white\' font-style=\'italic\'%3EP%3C/text%3E%3C/svg%3E'">
+            <span class="ep-duration">47:23</span>
+          </div>
+          <div class="ep-card-body">
+            <span class="eyebrow">Identity</span>
+            <h4>The Year We Stopped Pretending</h4>
+            <p>At 44, we finally said the things we'd been quietly thinking for a decade. About our marriages, our careers, and the version of ourselves we thought we'd be by now.</p>
+          </div>
+          <div class="ep-card-footer">
+            <button class="ep-play-btn" data-ep-id="ep12" data-title="Ep. 12 — The Year We Stopped Pretending" aria-label="Play episode">
+              <svg viewBox="0 0 20 20"><path d="M6.5 5.5v9l7-4.5-7-4.5z"/></svg>
+            </button>
+            <div class="ep-mini-progress"><div class="ep-mini-fill" id="fill-ep12"></div></div>
+            <div class="ep-links">
+              <button class="ep-link-btn" data-platform="spotify" title="Spotify">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ep 11 -->
+        <div class="ep-card reveal delay-2" data-category="relationships">
+          <div class="ep-card-art variant-2">
+            <span class="ep-ep-num">S2 · E11</span>
+            <img src="https://i.ibb.co.com/zHB6BBSj/Modern-feminine-podcast-logo.png" alt="" class="ep-art-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 70 70\'%3E%3Ccircle cx=\'35\' cy=\'35\' r=\'35\' fill=\'rgba(255,255,255,0.2)\'/%3E%3Ctext x=\'50%25\' y=\'55%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' font-family=\'Georgia\' fill=\'white\' font-style=\'italic\'%3EP%3C/text%3E%3C/svg%3E'">
+            <span class="ep-duration">52:07</span>
+          </div>
+          <div class="ep-card-body">
+            <span class="eyebrow">Relationships</span>
+            <h4>What Staying Actually Looks Like</h4>
+            <p>We've both been in long marriages. We got real about what "working on it" actually means when you're exhausted, busy, and have both changed.</p>
+          </div>
+          <div class="ep-card-footer">
+            <button class="ep-play-btn" data-ep-id="ep11" data-title="Ep. 11 — What Staying Actually Looks Like" aria-label="Play episode">
+              <svg viewBox="0 0 20 20"><path d="M6.5 5.5v9l7-4.5-7-4.5z"/></svg>
+            </button>
+            <div class="ep-mini-progress"><div class="ep-mini-fill" id="fill-ep11"></div></div>
+            <div class="ep-links">
+              <button class="ep-link-btn" title="Spotify">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ep 10 -->
+        <div class="ep-card reveal delay-3" data-category="career">
+          <div class="ep-card-art variant-3">
+            <span class="ep-ep-num">S2 · E10</span>
+            <img src="https://i.ibb.co.com/zHB6BBSj/Modern-feminine-podcast-logo.png" alt="" class="ep-art-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 70 70\'%3E%3Ccircle cx=\'35\' cy=\'35\' r=\'35\' fill=\'rgba(255,255,255,0.2)\'/%3E%3Ctext x=\'50%25\' y=\'55%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' font-family=\'Georgia\' fill=\'white\' font-style=\'italic\'%3EP%3C/text%3E%3C/svg%3E'">
+            <span class="ep-duration">39:45</span>
+          </div>
+          <div class="ep-card-body">
+            <span class="eyebrow">Career</span>
+            <h4>I Left My Dream Job and I'm Fine</h4>
+            <p>Serena walked away from the career she'd built for 17 years at 41. We talk about what comes after the brave thing, and why "fine" is actually radical.</p>
+          </div>
+          <div class="ep-card-footer">
+            <button class="ep-play-btn" data-ep-id="ep10" data-title="Ep. 10 — I Left My Dream Job and I'm Fine" aria-label="Play episode">
+              <svg viewBox="0 0 20 20"><path d="M6.5 5.5v9l7-4.5-7-4.5z"/></svg>
+            </button>
+            <div class="ep-mini-progress"><div class="ep-mini-fill" id="fill-ep10"></div></div>
+            <div class="ep-links">
+              <button class="ep-link-btn" title="Apple Podcasts">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ep 9 -->
+        <div class="ep-card reveal delay-1" data-category="motherhood">
+          <div class="ep-card-art variant-4">
+            <span class="ep-ep-num">S2 · E09</span>
+            <img src="https://i.ibb.co.com/zHB6BBSj/Modern-feminine-podcast-logo.png" alt="" class="ep-art-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 70 70\'%3E%3Ccircle cx=\'35\' cy=\'35\' r=\'35\' fill=\'rgba(255,255,255,0.2)\'/%3E%3Ctext x=\'50%25\' y=\'55%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' font-family=\'Georgia\' fill=\'white\' font-style=\'italic\'%3EP%3C/text%3E%3C/svg%3E'">
+            <span class="ep-duration">58:12</span>
+          </div>
+          <div class="ep-card-body">
+            <span class="eyebrow">Motherhood</span>
+            <h4>The Part of Parenting Nobody Talks About</h4>
+            <p>When your kids are old enough to see who you really are. What it means to let them and why it terrifies both of us in completely different ways.</p>
+          </div>
+          <div class="ep-card-footer">
+            <button class="ep-play-btn" data-ep-id="ep09" data-title="Ep. 9 — The Part of Parenting Nobody Talks About" aria-label="Play episode">
+              <svg viewBox="0 0 20 20"><path d="M6.5 5.5v9l7-4.5-7-4.5z"/></svg>
+            </button>
+            <div class="ep-mini-progress"><div class="ep-mini-fill" id="fill-ep09"></div></div>
+            <div class="ep-links">
+              <button class="ep-link-btn" title="Spotify">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ep 8 -->
+        <div class="ep-card reveal delay-2" data-category="identity">
+          <div class="ep-card-art variant-5">
+            <span class="ep-ep-num">S2 · E08</span>
+            <img src="https://i.ibb.co.com/zHB6BBSj/Modern-feminine-podcast-logo.png" alt="" class="ep-art-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 70 70\'%3E%3Ccircle cx=\'35\' cy=\'35\' r=\'35\' fill=\'rgba(255,255,255,0.2)\'/%3E%3Ctext x=\'50%25\' y=\'55%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' font-family=\'Georgia\' fill=\'white\' font-style=\'italic\'%3EP%3C/text%3E%3C/svg%3E'">
+            <span class="ep-duration">44:55</span>
+          </div>
+          <div class="ep-card-body">
+            <span class="eyebrow">Identity</span>
+            <h4>Grief That Doesn't Have a Name</h4>
+            <p>The things we've mourned that didn't get funerals. Career versions of ourselves. Old friendships. The lives we imagined. How to hold them honestly.</p>
+          </div>
+          <div class="ep-card-footer">
+            <button class="ep-play-btn" data-ep-id="ep08" data-title="Ep. 8 — Grief That Doesn't Have a Name" aria-label="Play episode">
+              <svg viewBox="0 0 20 20"><path d="M6.5 5.5v9l7-4.5-7-4.5z"/></svg>
+            </button>
+            <div class="ep-mini-progress"><div class="ep-mini-fill" id="fill-ep08"></div></div>
+            <div class="ep-links">
+              <button class="ep-link-btn" title="Apple Podcasts">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ep 7 -->
+        <div class="ep-card reveal delay-3" data-category="career">
+          <div class="ep-card-art variant-6">
+            <span class="ep-ep-num">S2 · E07</span>
+            <img src="https://i.ibb.co.com/zHB6BBSj/Modern-feminine-podcast-logo.png" alt="" class="ep-art-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 70 70\'%3E%3Ccircle cx=\'35\' cy=\'35\' r=\'35\' fill=\'rgba(255,255,255,0.2)\'/%3E%3Ctext x=\'50%25\' y=\'55%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-size=\'14\' font-family=\'Georgia\' fill=\'white\' font-style=\'italic\'%3EP%3C/text%3E%3C/svg%3E'">
+            <span class="ep-duration">41:18</span>
+          </div>
+          <div class="ep-card-body">
+            <span class="eyebrow">Career</span>
+            <h4>The Money Conversation Women Don't Have</h4>
+            <p>What we earn, what we charge, what we think we deserve and why those numbers are almost never the same. The financial honesty we should've had years ago.</p>
+          </div>
+          <div class="ep-card-footer">
+            <button class="ep-play-btn" data-ep-id="ep07" data-title="Ep. 7 — The Money Conversation Women Don't Have" aria-label="Play episode">
+              <svg viewBox="0 0 20 20"><path d="M6.5 5.5v9l7-4.5-7-4.5z"/></svg>
+            </button>
+            <div class="ep-mini-progress"><div class="ep-mini-fill" id="fill-ep07"></div></div>
+            <div class="ep-links">
+              <button class="ep-link-btn" title="Spotify">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /episodes-grid -->
+
+      <!-- Load More -->
+      <div style="text-align:center; margin-top:4rem;" class="reveal">
+        <button class="btn btn-outline" id="loadMoreBtn">Load More Episodes</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Newsletter on episodes page too -->
+  <section class="newsletter-cta">
+    <div class="container reveal">
+      <span class="eyebrow" style="color:rgba(255,255,255,0.7);">Never Miss a Drop</span>
+      <h2 style="margin-top:0.5rem;">New Episodes Every Tuesday</h2>
+      <p>Subscribe for alerts, behind-the-scenes, and exclusive content for subscribers only.</p>
+      <form class="newsletter-form" id="newsletterForm2">
+        <input type="email" class="newsletter-input" placeholder="your@email.com" required>
+        <button type="submit" class="newsletter-submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+</div><!-- /page-episodes -->
+
+
+<!-- ══════════════════════════════════════
+     FOOTER (global)
+══════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img 
+          src="https://i.ibb.co.com/zHB6BBSj/Modern-feminine-podcast-logo.png" 
+          alt="Proof of Life" 
+          class="footer-logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+        >
+        <span style="display:none; font-family:'Cormorant Garamond',serif; font-size:1.4rem; font-weight:400; color:rgba(255,255,255,0.8); font-style:italic;">Proof of Life</span>
+        <p>A podcast for women in their 40s who are done pretending and ready to start talking. New episodes every Tuesday.</p>
+        <div class="footer-social">
+          <a class="social-icon" href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a class="social-icon" href="#" aria-label="Spotify">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          </a>
+          <a class="social-icon" href="#" aria-label="Apple Podcasts">
+            <svg viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <a href="#" data-page="page-home">Home</a>
+        <a href="#" data-page="page-about">About Us</a>
+        <a href="#" data-page="page-episodes">All Episodes</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Listen</h5>
+        <a href="#" data-platform="spotify">Spotify</a>
+        <a href="#" data-platform="apple">Apple Podcasts</a>
+        <a href="#" data-platform="google">Google Podcasts</a>
+        <a href="#" data-platform="amazon">Amazon Music</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <a href="#">Instagram</a>
+        <a href="#">Newsletter</a>
+        <a href="#">Press &amp; Media</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Dev-Shofiqur | All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ── Mini Player ── -->
+<div class="mini-player" id="miniPlayer">
+  <div class="mini-player-art">
+    <svg viewBox="0 0 20 20"><path d="M6.5 5.5v9l7-4.5-7-4.5z"/></svg>
+  </div>
+  <div class="mini-player-info">
+    <div class="mini-player-title" id="miniPlayerTitle">Now Playing</div>
+    <div class="mini-player-show">Proof of Life</div>
+  </div>
+  <div class="mini-progress">
+    <div class="mini-fill" id="miniFill"></div>
+  </div>
+  <button class="mini-close" id="miniClose" aria-label="Close player">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l12 12M16 4L4 16"/></svg>
+  </button>
+</div>
+
+<!-- Script -->
+<script src="js/main.js"></script>
+
+<!-- Extra interactions -->
+<script>
+  // Load more button
+  document.getElementById('loadMoreBtn')?.addEventListener('click', function() {
+    this.textContent = 'Loading...';
+    setTimeout(() => {
+      this.textContent = 'All Episodes Loaded';
+      this.disabled = true;
+      this.style.opacity = '0.5';
+    }, 1200);
+  });
+
+  // Second newsletter form
+  document.getElementById('newsletterForm2')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = e.target.querySelector('.newsletter-submit');
+    btn.textContent = '✓ You\'re in!';
+    e.target.querySelector('.newsletter-input').value = '';
+    setTimeout(() => { btn.textContent = 'Subscribe'; }, 3500);
+  });
+</script>
+
+</body>
+</html>
